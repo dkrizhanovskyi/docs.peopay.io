@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Framework - PeoPay Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Framework";
+        var mkdocs_page_input_path = "DCS_Framework/DCS_Framework.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> PeoPay Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">White Paper</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../WhitePaper/PeoPay_White_Paper/">Vision and Features</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Dynamic Contribution Scoring (DCS)</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Framework</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-overview">1. Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-purpose">2. Purpose</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#21-key-objectives">2.1 Key Objectives</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-scoring-model">3. Scoring Model</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#31-formula">3.1 Formula</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#32-properties">3.2 Properties</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-use-cases">4. Use Cases</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#41-staking-rewards">4.1 Staking Rewards</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#42-governance-influence">4.2 Governance Influence</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#43-merchant-incentives">4.3 Merchant Incentives</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#44-referral-bonuses">4.4 Referral Bonuses</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#45-penalty-enforcement">4.5 Penalty Enforcement</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#5-gamification-and-tiers">5. Gamification and Tiers</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#6-implementation">6. Implementation</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#61-data-collection">6.1 Data Collection</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#62-smart-contracts">6.2 Smart Contracts</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#63-dynamic-adjustments">6.3 Dynamic Adjustments</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#7-benefits">7. Benefits</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#71-fairness-and-transparency">7.1 Fairness and Transparency</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#72-ecosystem-alignment">7.2 Ecosystem Alignment</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#73-fraud-prevention">7.3 Fraud Prevention</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#74-gamified-engagement">7.4 Gamified Engagement</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#8-pilot-testing">8. Pilot Testing</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#81-objectives">8.1 Objectives</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#82-metrics-to-track">8.2 Metrics to Track</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#83-pilot-regions">8.3 Pilot Regions</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#9-long-term-vision">9. Long-Term Vision</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#91-adaptable-scoring">9.1 Adaptable Scoring</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#92-nft-based-rewards">9.2 NFT-Based Rewards</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#93-integration-with-defi">9.3 Integration with DeFi</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#10-conclusion">10. Conclusion</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#next-steps">Next Steps</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../Strategic_Plan/Strategic_Plan/">Strategic Plan</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="../../Tokenomics_Model/Tokenomics_Model.md">Tokenomics Model</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../Governance_Guide/Governance_Guide/">Governance Guide</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">User Guides</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../User_Guides/Getting_Started/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../User_Guides/Crypto2Mobile/">Crypto-to-Mobile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../User_Guides/Staking_Guide/">Staking Guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../User_Guides/FAQs/">FAQs</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Developer Resources</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../API_Documentation/API_Endpoints/">API Documentation</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Visual Assets</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >Charts</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Assets/Charts/user_growth_chart.png">User Growth</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Assets/Charts/tokenomics_pie_chart.png">Tokenomics Distribution</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Diagrams</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Assets/Diagrams/peopay_ecosystem_flowchart.png">Ecosystem Flow</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Assets/Diagrams/peoprove_logic_diagram.png">DCS Logic</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">PeoPay Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Dynamic Contribution Scoring (DCS)</li>
+      <li class="breadcrumb-item active">Framework</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="dynamic-contribution-scoring-dcs-framework">Dynamic Contribution Scoring (DCS) Framework</h1>
+<h2 id="1-overview">1. Overview</h2>
+<p>Dynamic Contribution Scoring (DCS) is a core mechanism within the PeoPay ecosystem. It aligns user behavior with the platform’s goals by providing a transparent, adaptable system that rewards positive contributions and penalizes harmful actions. By incentivizing beneficial activities like staking, referrals, and governance participation—and discouraging spam, fraud, and malicious conduct—DCS ensures fairness, fosters growth, and promotes long-term sustainability.</p>
+<h2 id="2-purpose">2. Purpose</h2>
+<h3 id="21-key-objectives">2.1 Key Objectives</h3>
+<ol>
+<li>
+<p><strong>Encourage Ecosystem Growth</strong>:<br />
+   Reward users for staking, transacting, participating in governance, and referring new members.</p>
+</li>
+<li>
+<p><strong>Discourage Misuse</strong>:<br />
+   Penalize fraudulent or harmful actions to maintain ecosystem integrity.</p>
+</li>
+<li>
+<p><strong>Promote Long-Term Engagement</strong>:<br />
+   Gamified tiers and rewards inspire sustained user involvement.</p>
+</li>
+<li>
+<p><strong>Optimize Resource Allocation</strong>:<br />
+   Dynamically adjust rewards to support growth priorities and stability.</p>
+</li>
+</ol>
+<h2 id="3-scoring-model">3. Scoring Model</h2>
+<h3 id="31-formula">3.1 Formula</h3>
+<p>The DCS formula calculates a user’s contribution score based on weighted positive activities and penalties:</p>
+<p>[
+\text{DCS}(t) = \alpha \cdot \text{Tx}(t) + \beta \cdot \text{Stake}(t) + \gamma \cdot \text{Gov}(t) + \delta \cdot \text{Referral}(t) - \epsilon \cdot \text{Penalty}(t)
+]</p>
+<p>Where:<br />
+- <strong>Tx(t)</strong>: Transaction volume and frequency<br />
+- <strong>Stake(t)</strong>: Amount of PeoCoin staked over time<br />
+- <strong>Gov(t)</strong>: Governance participation (e.g., voting)<br />
+- <strong>Referral(t)</strong>: Successful user referrals<br />
+- <strong>Penalty(t)</strong>: Deductions for harmful behavior (e.g., fraud, spam)<br />
+- <strong>Weights (α, β, γ, δ, ε)</strong>: Dynamically adjusted based on evolving ecosystem priorities</p>
+<h3 id="32-properties">3.2 Properties</h3>
+<ul>
+<li><strong>Transparency</strong>: Users can track their scores and understand how actions affect rewards.</li>
+<li><strong>Penalty Dominance</strong>: Negative behaviors incur substantial penalties, outweighing potential gains.</li>
+<li><strong>Dynamic Adjustments</strong>: Weight parameters evolve over time, reflecting current ecosystem goals.</li>
+</ul>
+<h2 id="4-use-cases">4. Use Cases</h2>
+<h3 id="41-staking-rewards">4.1 Staking Rewards</h3>
+<p>DCS scores determine tier-based staking yields:</p>
+<ul>
+<li><strong>Bronze Tier</strong>: Base staking rewards  </li>
+<li><strong>Silver Tier</strong>: +10% bonus  </li>
+<li><strong>Gold Tier</strong>: +20% bonus  </li>
+<li><strong>Platinum Tier</strong>: +30% bonus</li>
+</ul>
+<h3 id="42-governance-influence">4.2 Governance Influence</h3>
+<p>Users with higher DCS scores have greater voting power, enhancing their influence in decision-making and policy formation.</p>
+<h3 id="43-merchant-incentives">4.3 Merchant Incentives</h3>
+<p>Merchants benefit from high DCS scores through:</p>
+<ul>
+<li>Reduced transaction fees  </li>
+<li>Access to premium promotional tools and features</li>
+</ul>
+<h3 id="44-referral-bonuses">4.4 Referral Bonuses</h3>
+<p>Referral rewards scale with DCS tiers, encouraging users to grow the ecosystem organically.</p>
+<h3 id="45-penalty-enforcement">4.5 Penalty Enforcement</h3>
+<p>Malicious activities like fraudulent referrals or governance spamming result in score deductions, reducing rewards and feature access.</p>
+<h2 id="5-gamification-and-tiers">5. Gamification and Tiers</h2>
+<p>DCS employs a tiered system to motivate active participation and higher contributions:</p>
+<table>
+<thead>
+<tr>
+<th><strong>DCS Tier</strong></th>
+<th><strong>Score Range</strong></th>
+<th><strong>Benefits</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bronze</td>
+<td>0–499</td>
+<td>Base staking rewards, standard fees</td>
+</tr>
+<tr>
+<td>Silver</td>
+<td>500–999</td>
+<td>+10% rewards, 5% fee discounts</td>
+</tr>
+<tr>
+<td>Gold</td>
+<td>1000–1999</td>
+<td>+20% rewards, 10% fee discounts</td>
+</tr>
+<tr>
+<td>Platinum</td>
+<td>2000+</td>
+<td>+30% rewards, 20% fee discounts</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-implementation">6. Implementation</h2>
+<h3 id="61-data-collection">6.1 Data Collection</h3>
+<p>On-chain metrics (e.g., transaction volume, staking activity) and verified off-chain data (e.g., user referrals) feed into DCS calculations.</p>
+<h3 id="62-smart-contracts">6.2 Smart Contracts</h3>
+<p>Automated smart contracts ensure transparent, efficient scoring and reward distribution.</p>
+<h3 id="63-dynamic-adjustments">6.3 Dynamic Adjustments</h3>
+<p>Weight parameters (α, β, γ, δ, ε) are periodically updated to address ecosystem needs. For example, during early growth phases, the referral weight might increase to incentivize user expansion.</p>
+<h2 id="7-benefits">7. Benefits</h2>
+<h3 id="71-fairness-and-transparency">7.1 Fairness and Transparency</h3>
+<p>Users clearly see how their actions impact their DCS and associated rewards.</p>
+<h3 id="72-ecosystem-alignment">7.2 Ecosystem Alignment</h3>
+<p>DCS aligns individual incentives with the broader ecosystem’s health and growth.</p>
+<h3 id="73-fraud-prevention">7.3 Fraud Prevention</h3>
+<p>Penalties deter harmful behaviors, maintaining platform integrity.</p>
+<h3 id="74-gamified-engagement">7.4 Gamified Engagement</h3>
+<p>Tiered rewards and progression create an engaging, competitive user environment.</p>
+<h2 id="8-pilot-testing">8. Pilot Testing</h2>
+<h3 id="81-objectives">8.1 Objectives</h3>
+<ul>
+<li>Validate DCS’s influence on user engagement and key ecosystem metrics  </li>
+<li>Adjust weights and tiers based on real-world user data</li>
+</ul>
+<h3 id="82-metrics-to-track">8.2 Metrics to Track</h3>
+<ol>
+<li>Staking participation and reward distribution  </li>
+<li>Growth in user referrals and retention  </li>
+<li>Reduction in spam and other harmful activities  </li>
+<li>Correlation between DCS tiers and governance involvement</li>
+</ol>
+<h3 id="83-pilot-regions">8.3 Pilot Regions</h3>
+<p>Initial tests to be conducted in Kenya, the Philippines, and Nigeria, integrating with local mobile money systems (e.g., M-Pesa, GCash).</p>
+<h2 id="9-long-term-vision">9. Long-Term Vision</h2>
+<h3 id="91-adaptable-scoring">9.1 Adaptable Scoring</h3>
+<p>DCS parameters will evolve as the ecosystem matures, accommodating new use cases and governance structures.</p>
+<h3 id="92-nft-based-rewards">9.2 NFT-Based Rewards</h3>
+<p>DCS tiers may be represented as NFTs, granting on-chain credentials and unlocking exclusive platform benefits.</p>
+<h3 id="93-integration-with-defi">9.3 Integration with DeFi</h3>
+<p>Future expansions into DeFi products (e.g., lending, borrowing) could leverage DCS scores for determining collateral requirements and interest rates.</p>
+<h2 id="10-conclusion">10. Conclusion</h2>
+<p>DCS is integral to PeoPay’s vision of a transparent, user-driven financial ecosystem. By aligning incentives with collective goals, DCS fosters trust, engagement, and sustainable growth—ensuring the platform’s long-term success.</p>
+<hr />
+<h3 id="next-steps">Next Steps</h3>
+<ul>
+<li><a href="../../WhitePaper/PeoPay_White_Paper/">White Paper</a>: Overview of PeoPay’s vision and features  </li>
+<li><a href="../../Strategic_Plan/Strategic_Plan/">Strategic Plan</a>: Implementation and testing details  </li>
+<li><a href="../Tokenomics_Model/Tokenomics_Model.md">Tokenomics Model</a>: Understanding DCS’s role in token dynamics</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../WhitePaper/PeoPay_White_Paper/" class="btn btn-neutral float-left" title="Vision and Features"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../Strategic_Plan/Strategic_Plan/" class="btn btn-neutral float-right" title="Strategic Plan">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../WhitePaper/PeoPay_White_Paper/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../Strategic_Plan/Strategic_Plan/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

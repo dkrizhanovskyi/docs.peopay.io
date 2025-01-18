@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Governance Guide - PeoPay Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Governance Guide";
+        var mkdocs_page_input_path = "Governance_Guide/Governance_Guide.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> PeoPay Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">White Paper</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../WhitePaper/PeoPay_White_Paper/">Vision and Features</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Dynamic Contribution Scoring (DCS)</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../DCS_Framework/DCS_Framework/">Framework</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../Strategic_Plan/Strategic_Plan/">Strategic Plan</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="../../Tokenomics_Model/Tokenomics_Model.md">Tokenomics Model</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Governance Guide</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-overview">1. Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-principles-of-governance">2. Principles of Governance</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#21-decentralization">2.1 Decentralization</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#22-transparency">2.2 Transparency</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#23-inclusivity">2.3 Inclusivity</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-governance-structure">3. Governance Structure</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#31-key-participants">3.1 Key Participants</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#32-governance-mechanisms">3.2 Governance Mechanisms</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-voting-system">4. Voting System</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#41-proposal-lifecycle">4.1 Proposal Lifecycle</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#42-voting-power">4.2 Voting Power</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#43-quorum-and-approval">4.3 Quorum and Approval</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#5-treasury-management">5. Treasury Management</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#51-treasury-purpose">5.1 Treasury Purpose</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#52-treasury-allocation">5.2 Treasury Allocation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#53-resilience-reserve">5.3 Resilience Reserve</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#6-transition-to-full-decentralization">6. Transition to Full Decentralization</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#61-transition-phases">6.1 Transition Phases</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#62-community-committees">6.2 Community Committees</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#7-integration-with-dynamic-contribution-scoring-dcs">7. Integration with Dynamic Contribution Scoring (DCS)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#71-dcs-role-in-governance">7.1 DCS Role in Governance</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#72-incentivizing-engagement">7.2 Incentivizing Engagement</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#8-risk-management">8. Risk Management</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#81-mitigating-centralization-risks">8.1 Mitigating Centralization Risks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#82-proposal-spam-prevention">8.2 Proposal Spam Prevention</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#83-treasury-oversight">8.3 Treasury Oversight</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#9-long-term-vision">9. Long-Term Vision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#10-conclusion">10. Conclusion</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#next-steps">Next Steps</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">User Guides</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../User_Guides/Getting_Started/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../User_Guides/Crypto2Mobile/">Crypto-to-Mobile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../User_Guides/Staking_Guide/">Staking Guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../User_Guides/FAQs/">FAQs</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Developer Resources</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../API_Documentation/API_Endpoints/">API Documentation</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Visual Assets</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >Charts</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Assets/Charts/user_growth_chart.png">User Growth</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Assets/Charts/tokenomics_pie_chart.png">Tokenomics Distribution</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Diagrams</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Assets/Diagrams/peopay_ecosystem_flowchart.png">Ecosystem Flow</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Assets/Diagrams/peoprove_logic_diagram.png">DCS Logic</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">PeoPay Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Governance Guide</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="peopay-governance-guide"><strong>PeoPay Governance Guide</strong></h2>
+<hr />
+<h3 id="1-overview"><strong>1. Overview</strong></h3>
+<p>The PeoPay Governance Guide outlines the framework for decentralized decision-making within the PeoPay ecosystem. Powered by PeoCoin (PEO) and Dynamic Contribution Scoring (DCS), the governance system ensures transparency, fairness, and community involvement in platform evolution. As PeoPay grows, governance transitions from a core-team-controlled model to a fully decentralized, community-driven approach.</p>
+<hr />
+<h3 id="2-principles-of-governance"><strong>2. Principles of Governance</strong></h3>
+<h4 id="21-decentralization"><strong>2.1 Decentralization</strong></h4>
+<ul>
+<li>Governance rights are distributed among token holders, with voting power influenced by DCS scores.</li>
+<li>Decision-making authority transitions to the community over three years, ensuring a gradual shift to full decentralization.</li>
+</ul>
+<h4 id="22-transparency"><strong>2.2 Transparency</strong></h4>
+<ul>
+<li>All governance proposals, votes, and decisions are recorded on-chain for full transparency and accountability.</li>
+</ul>
+<h4 id="23-inclusivity"><strong>2.3 Inclusivity</strong></h4>
+<ul>
+<li>High DCS scores reward active and responsible users with increased governance influence, promoting meaningful participation.</li>
+</ul>
+<hr />
+<h3 id="3-governance-structure"><strong>3. Governance Structure</strong></h3>
+<h4 id="31-key-participants"><strong>3.1 Key Participants</strong></h4>
+<ol>
+<li><strong>Token Holders</strong>:</li>
+<li>Hold PeoCoin to participate in governance.</li>
+<li>Voting power scales with DCS scores.</li>
+<li><strong>Core Team</strong> (Initial Phase):</li>
+<li>Retains control during the early stages to ensure smooth development.</li>
+<li>Gradually cedes authority to token holders based on milestones.</li>
+<li><strong>Community Committees</strong> (Post-Transition):</li>
+<li>Specialized committees (e.g., Treasury Committee, Development Oversight) manage specific functions under community governance.</li>
+</ol>
+<h4 id="32-governance-mechanisms"><strong>3.2 Governance Mechanisms</strong></h4>
+<ul>
+<li><strong>Proposal Submission</strong>:</li>
+<li>Token holders submit proposals for upgrades, fee adjustments, treasury allocations, and new features.</li>
+<li><strong>Voting</strong>:</li>
+<li>Token-weighted voting determines proposal outcomes.</li>
+<li>Voting power = $\text{PEO Holdings}$$</li>
+</ul>
+<p>$$\times$
+$$
+$\text{DCS Score Modifier}$.
+- <strong>Implementation</strong>:
+  - Approved proposals are executed automatically via smart contracts or by the designated teams.</p>
+<hr />
+<h3 id="4-voting-system"><strong>4. Voting System</strong></h3>
+<h4 id="41-proposal-lifecycle"><strong>4.1 Proposal Lifecycle</strong></h4>
+<ol>
+<li><strong>Idea Submission</strong>:</li>
+<li>Proposals are submitted through an on-chain interface.</li>
+<li>Includes details like objectives, required resources, and expected outcomes.</li>
+<li><strong>Community Review</strong>:</li>
+<li>Open discussion period where community members provide feedback.</li>
+<li><strong>Voting Phase</strong>:</li>
+<li>Voting is open for a set duration (e.g., 7–14 days).</li>
+<li>Requires a quorum (minimum participation threshold) for validity.</li>
+<li><strong>Execution</strong>:</li>
+<li>If approved, proposals are executed automatically or assigned to relevant teams.</li>
+</ol>
+<h4 id="42-voting-power"><strong>4.2 Voting Power</strong></h4>
+<ul>
+<li>Voting power is calculated using the following formula:
+$$
+\text{Voting Power} = \text{PEO Holdings}
+$$</li>
+</ul>
+<p>$$\times$$</p>
+<p>$$
+\text{DCS Modifier}
+$$
+  - <strong>DCS Modifier</strong>:
+    - Bronze Tier: $1.0$
+    - Silver Tier: $1.1$
+    - Gold Tier: $1.2$
+    - Platinum Tier: $1.3$</p>
+<h4 id="43-quorum-and-approval"><strong>4.3 Quorum and Approval</strong></h4>
+<ul>
+<li><strong>Quorum</strong>: Minimum 10% of circulating PEO must participate for the vote to be valid.</li>
+<li><strong>Approval Threshold</strong>: A proposal requires at least 51% of the votes in favor to pass.</li>
+</ul>
+<hr />
+<h3 id="5-treasury-management"><strong>5. Treasury Management</strong></h3>
+<h4 id="51-treasury-purpose"><strong>5.1 Treasury Purpose</strong></h4>
+<p>The PeoPay treasury supports:
+- Development of new features and integrations.
+- Marketing and regional expansion efforts.
+- Liquidity and stability mechanisms.
+- Ecosystem grants and incentives.</p>
+<h4 id="52-treasury-allocation"><strong>5.2 Treasury Allocation</strong></h4>
+<ul>
+<li>Funds are allocated based on community-approved proposals.</li>
+<li>Example allocations:</li>
+<li>40%: Development and technical upgrades.</li>
+<li>30%: Marketing and adoption initiatives.</li>
+<li>20%: Liquidity and stability.</li>
+<li>10%: Grants and ecosystem partnerships.</li>
+</ul>
+<h4 id="53-resilience-reserve"><strong>5.3 Resilience Reserve</strong></h4>
+<ul>
+<li>A portion of treasury funds is reserved as an insurance mechanism to stabilize the ecosystem during crises, such as market downturns or technical vulnerabilities.</li>
+</ul>
+<hr />
+<h3 id="6-transition-to-full-decentralization"><strong>6. Transition to Full Decentralization</strong></h3>
+<h4 id="61-transition-phases"><strong>6.1 Transition Phases</strong></h4>
+<ol>
+<li><strong>Phase 1 (Year 1)</strong>:</li>
+<li>Core team retains majority control.</li>
+<li>Community voting is advisory.</li>
+<li><strong>Phase 2 (Year 2)</strong>:</li>
+<li>Community gains majority voting power over treasury allocations and minor upgrades.</li>
+<li>Core team retains control over major technical decisions.</li>
+<li><strong>Phase 3 (Year 3)</strong>:</li>
+<li>Full decentralization achieved.</li>
+<li>Community voting governs all aspects of the platform.</li>
+</ol>
+<h4 id="62-community-committees"><strong>6.2 Community Committees</strong></h4>
+<ul>
+<li><strong>Treasury Committee</strong>: Manages fund allocation based on community-approved proposals.</li>
+<li><strong>Development Oversight Committee</strong>: Reviews and prioritizes technical upgrades.</li>
+<li><strong>Ecosystem Growth Committee</strong>: Focuses on partnerships, adoption, and incentives.</li>
+</ul>
+<hr />
+<h3 id="7-integration-with-dynamic-contribution-scoring-dcs"><strong>7. Integration with Dynamic Contribution Scoring (DCS)</strong></h3>
+<h4 id="71-dcs-role-in-governance"><strong>7.1 DCS Role in Governance</strong></h4>
+<ul>
+<li>DCS ensures voting power is distributed based on contributions to the ecosystem.</li>
+<li>High-scoring users have greater influence, encouraging active participation.</li>
+</ul>
+<h4 id="72-incentivizing-engagement"><strong>7.2 Incentivizing Engagement</strong></h4>
+<ul>
+<li>Governance participation rewards users with DCS score boosts, fostering a virtuous cycle of engagement and rewards.</li>
+</ul>
+<hr />
+<h3 id="8-risk-management"><strong>8. Risk Management</strong></h3>
+<h4 id="81-mitigating-centralization-risks"><strong>8.1 Mitigating Centralization Risks</strong></h4>
+<ul>
+<li>Gradual transition to decentralization prevents abrupt power shifts.</li>
+<li>Voting weight adjustments prevent whales from dominating governance.</li>
+</ul>
+<h4 id="82-proposal-spam-prevention"><strong>8.2 Proposal Spam Prevention</strong></h4>
+<ul>
+<li>A small fee in PEO is required to submit proposals, refundable upon achieving quorum.</li>
+<li>DCS penalties for malicious or spam proposals.</li>
+</ul>
+<h4 id="83-treasury-oversight"><strong>8.3 Treasury Oversight</strong></h4>
+<ul>
+<li>On-chain auditing tools ensure transparency in fund allocation and usage.</li>
+</ul>
+<hr />
+<h3 id="9-long-term-vision"><strong>9. Long-Term Vision</strong></h3>
+<p>As PeoPay matures, its governance system evolves to reflect the needs of its global community. By leveraging token-weighted voting, DCS incentives, and transparent treasury management, PeoPay ensures that its ecosystem remains sustainable, inclusive, and user-driven.</p>
+<hr />
+<h3 id="10-conclusion"><strong>10. Conclusion</strong></h3>
+<p>The governance model empowers PeoPay users to shape the platform’s future while ensuring fairness and accountability. By aligning governance power with meaningful contributions through DCS, PeoPay fosters a decentralized ecosystem that prioritizes transparency, sustainability, and community growth.</p>
+<hr />
+<h3 id="next-steps"><strong>Next Steps</strong></h3>
+<ul>
+<li><a href="../../WhitePaper/PeoPay_White_Paper/">White Paper</a>: Learn about PeoPay’s vision and core features.</li>
+<li><a href="../../DCS_Framework/DCS_Framework/">DCS Framework</a>: Explore how DCS drives incentives and governance influence.</li>
+<li><a href="../../Strategic_Plan/Strategic_Plan/">Strategic Plan</a>: Understand the roadmap for implementing governance systems.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../Strategic_Plan/Strategic_Plan/" class="btn btn-neutral float-left" title="Strategic Plan"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../User_Guides/Getting_Started/" class="btn btn-neutral float-right" title="Getting Started">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../Strategic_Plan/Strategic_Plan/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../User_Guides/Getting_Started/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>API Documentation - PeoPay Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "API Documentation";
+        var mkdocs_page_input_path = "API_Documentation/API_Endpoints.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> PeoPay Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">White Paper</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../WhitePaper/PeoPay_White_Paper/">Vision and Features</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Dynamic Contribution Scoring (DCS)</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../DCS_Framework/DCS_Framework/">Framework</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../Strategic_Plan/Strategic_Plan/">Strategic Plan</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="../../Tokenomics_Model/Tokenomics_Model.md">Tokenomics Model</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../Governance_Guide/Governance_Guide/">Governance Guide</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">User Guides</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../User_Guides/Getting_Started/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../User_Guides/Crypto2Mobile/">Crypto-to-Mobile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../User_Guides/Staking_Guide/">Staking Guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../User_Guides/FAQs/">FAQs</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Developer Resources</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">API Documentation</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-overview">1. Overview</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#base-url">Base URL</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-authentication">2. Authentication</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#endpoint-login">Endpoint: Login</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#request">Request</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#response">Response</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#endpoint-register">Endpoint: Register</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#request_1">Request</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#response_1">Response</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-user-management">3. User Management</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#endpoint-get-user-profile">Endpoint: Get User Profile</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#response_2">Response</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-transactions">4. Transactions</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#endpoint-send-p2p-payment">Endpoint: Send P2P Payment</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#request_2">Request</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#response_3">Response</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#endpoint-crypto-to-mobile-conversion">Endpoint: Crypto-to-Mobile Conversion</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#request_3">Request</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#response_4">Response</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#5-staking">5. Staking</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#endpoint-stake-peocoin">Endpoint: Stake PeoCoin</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#request_4">Request</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#response_5">Response</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#endpoint-get-staking-rewards">Endpoint: Get Staking Rewards</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#response_6">Response</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#6-governance">6. Governance</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#endpoint-submit-proposal">Endpoint: Submit Proposal</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#request_5">Request</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#response_7">Response</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#endpoint-vote-on-proposal">Endpoint: Vote on Proposal</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#request_6">Request</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#response_8">Response</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#7-dynamic-contribution-scoring-dcs">7. Dynamic Contribution Scoring (DCS)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#endpoint-get-dcs-score">Endpoint: Get DCS Score</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#response_9">Response</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#8-error-codes">8. Error Codes</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#io">**io</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#9-rate-limits">9. Rate Limits</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#headers">Headers</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#10-examples">10. Examples</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#send-a-payment-curl">Send a Payment (cURL)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#next-steps">Next Steps</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Visual Assets</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >Charts</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Assets/Charts/user_growth_chart.png">User Growth</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Assets/Charts/tokenomics_pie_chart.png">Tokenomics Distribution</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Diagrams</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Assets/Diagrams/peopay_ecosystem_flowchart.png">Ecosystem Flow</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Assets/Diagrams/peoprove_logic_diagram.png">DCS Logic</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">PeoPay Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Developer Resources</li>
+      <li class="breadcrumb-item active">API Documentation</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="api-documentation"><strong>API Documentation</strong></h1>
+<p>This documentation provides a io
+prehensive guide to PeoPay’s APIs, enabling developers to integrate with the PeoPay ecosystem. The APIs allow seamless access to core features such as user management, P2P payments, staking, governance, and Dynamic Contribution Scoring (DCS).</p>
+<hr />
+<h2 id="1-overview"><strong>1. Overview</strong></h2>
+<p>PeoPay APIs enable developers to:
+- Authenticate users and manage accounts.
+- Initiate and track transactions, including crypto-to-mobile money conversions.
+- Access staking, rewards, and referral systems.
+- Participate in governance through voting and proposal submission.
+- Monitor user contributions and penalties via DCS.</p>
+<h3 id="base-url"><strong>Base URL</strong></h3>
+<ul>
+<li><strong>Production Environment</strong>: <code>https://api.peopay.io
+/v1</code></li>
+<li><strong>Sandbox Environment</strong>: <code>https://sandbox.api.peopay.io
+/v1</code></li>
+</ul>
+<hr />
+<h2 id="2-authentication"><strong>2. Authentication</strong></h2>
+<h3 id="endpoint-login"><strong>Endpoint: Login</strong></h3>
+<p>Authenticate users and retrieve a session token for subsequent API requests.</p>
+<ul>
+<li><strong>Method</strong>: <code>POST</code></li>
+<li><strong>URL</strong>: <code>/auth/login</code></li>
+</ul>
+<h4 id="request"><strong>Request</strong></h4>
+<pre><code class="language-json">{
+  &quot;username&quot;: &quot;user@example.io
+  &quot;,
+  &quot;password&quot;: &quot;securePassword123&quot;
+}
+</code></pre>
+<h4 id="response"><strong>Response</strong></h4>
+<pre><code class="language-json">{
+  &quot;token&quot;: &quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...&quot;,
+  &quot;expires_in&quot;: 3600
+}
+</code></pre>
+<hr />
+<h3 id="endpoint-register"><strong>Endpoint: Register</strong></h3>
+<p>Create a new user account.</p>
+<ul>
+<li><strong>Method</strong>: <code>POST</code></li>
+<li><strong>URL</strong>: <code>/auth/register</code></li>
+</ul>
+<h4 id="request_1"><strong>Request</strong></h4>
+<pre><code class="language-json">{
+  &quot;username&quot;: &quot;user@example.io
+  &quot;,
+  &quot;password&quot;: &quot;securePassword123&quot;,
+  &quot;mobile_number&quot;: &quot;+1234567890&quot;
+}
+</code></pre>
+<h4 id="response_1"><strong>Response</strong></h4>
+<pre><code class="language-json">{
+  &quot;message&quot;: &quot;User registered successfully. Please verify your email.&quot;
+}
+</code></pre>
+<hr />
+<h2 id="3-user-management"><strong>3. User Management</strong></h2>
+<h3 id="endpoint-get-user-profile"><strong>Endpoint: Get User Profile</strong></h3>
+<p>Retrieve user details, including DCS score and staking status.</p>
+<ul>
+<li><strong>Method</strong>: <code>GET</code></li>
+<li><strong>URL</strong>: <code>/user/profile</code></li>
+<li><strong>Headers</strong>: <code>Authorization: Bearer &lt;token&gt;</code></li>
+</ul>
+<h4 id="response_2"><strong>Response</strong></h4>
+<pre><code class="language-json">{
+  &quot;username&quot;: &quot;user@example.io
+  &quot;,
+  &quot;mobile_number&quot;: &quot;+1234567890&quot;,
+  &quot;dcs_score&quot;: 1250,
+  &quot;staking_balance&quot;: 500,
+  &quot;referrals&quot;: 10
+}
+</code></pre>
+<hr />
+<h2 id="4-transactions"><strong>4. Transactions</strong></h2>
+<h3 id="endpoint-send-p2p-payment"><strong>Endpoint: Send P2P Payment</strong></h3>
+<p>Send a peer-to-peer payment using PeoCoin.</p>
+<ul>
+<li><strong>Method</strong>: <code>POST</code></li>
+<li><strong>URL</strong>: <code>/transactions/p2p</code></li>
+</ul>
+<h4 id="request_2"><strong>Request</strong></h4>
+<pre><code class="language-json">{
+  &quot;recipient&quot;: &quot;recipient@example.io
+  &quot;,
+  &quot;amount&quot;: 50,
+  &quot;message&quot;: &quot;Payment for services&quot;
+}
+</code></pre>
+<h4 id="response_3"><strong>Response</strong></h4>
+<pre><code class="language-json">{
+  &quot;transaction_id&quot;: &quot;abc123&quot;,
+  &quot;status&quot;: &quot;success&quot;,
+  &quot;timestamp&quot;: &quot;2024-01-01T12:00:00Z&quot;
+}
+</code></pre>
+<hr />
+<h3 id="endpoint-crypto-to-mobile-conversion"><strong>Endpoint: Crypto-to-Mobile Conversion</strong></h3>
+<p>Convert crypto to mobile money.</p>
+<ul>
+<li><strong>Method</strong>: <code>POST</code></li>
+<li><strong>URL</strong>: <code>/transactions/convert</code></li>
+</ul>
+<h4 id="request_3"><strong>Request</strong></h4>
+<pre><code class="language-json">{
+  &quot;amount&quot;: 100,
+  &quot;currency&quot;: &quot;PEO&quot;,
+  &quot;mobile_number&quot;: &quot;+1234567890&quot;
+}
+</code></pre>
+<h4 id="response_4"><strong>Response</strong></h4>
+<pre><code class="language-json">{
+  &quot;conversion_id&quot;: &quot;conv123&quot;,
+  &quot;status&quot;: &quot;processing&quot;,
+  &quot;mobile_money_balance&quot;: 1000,
+  &quot;exchange_rate&quot;: 1.2
+}
+</code></pre>
+<hr />
+<h2 id="5-staking"><strong>5. Staking</strong></h2>
+<h3 id="endpoint-stake-peocoin"><strong>Endpoint: Stake PeoCoin</strong></h3>
+<p>Stake PeoCoin to earn rewards.</p>
+<ul>
+<li><strong>Method</strong>: <code>POST</code></li>
+<li><strong>URL</strong>: <code>/staking/stake</code></li>
+</ul>
+<h4 id="request_4"><strong>Request</strong></h4>
+<pre><code class="language-json">{
+  &quot;amount&quot;: 200
+}
+</code></pre>
+<h4 id="response_5"><strong>Response</strong></h4>
+<pre><code class="language-json">{
+  &quot;staking_id&quot;: &quot;stake123&quot;,
+  &quot;status&quot;: &quot;success&quot;,
+  &quot;message&quot;: &quot;You have successfully staked 200 PEO.&quot;
+}
+</code></pre>
+<hr />
+<h3 id="endpoint-get-staking-rewards"><strong>Endpoint: Get Staking Rewards</strong></h3>
+<p>Retrieve current staking rewards.</p>
+<ul>
+<li><strong>Method</strong>: <code>GET</code></li>
+<li><strong>URL</strong>: <code>/staking/rewards</code></li>
+<li><strong>Headers</strong>: <code>Authorization: Bearer &lt;token&gt;</code></li>
+</ul>
+<h4 id="response_6"><strong>Response</strong></h4>
+<pre><code class="language-json">{
+  &quot;total_rewards&quot;: 50,
+  &quot;next_payout&quot;: &quot;2024-01-15T00:00:00Z&quot;
+}
+</code></pre>
+<hr />
+<h2 id="6-governance"><strong>6. Governance</strong></h2>
+<h3 id="endpoint-submit-proposal"><strong>Endpoint: Submit Proposal</strong></h3>
+<p>Submit a governance proposal.</p>
+<ul>
+<li><strong>Method</strong>: <code>POST</code></li>
+<li><strong>URL</strong>: <code>/governance/proposals</code></li>
+</ul>
+<h4 id="request_5"><strong>Request</strong></h4>
+<pre><code class="language-json">{
+  &quot;title&quot;: &quot;Proposal to Increase Staking Yields&quot;,
+  &quot;description&quot;: &quot;This proposal suggests increasing staking yields by 5% to encourage participation.&quot;,
+  &quot;category&quot;: &quot;Staking&quot;,
+  &quot;attachments&quot;: []
+}
+</code></pre>
+<h4 id="response_7"><strong>Response</strong></h4>
+<pre><code class="language-json">{
+  &quot;proposal_id&quot;: &quot;prop123&quot;,
+  &quot;status&quot;: &quot;submitted&quot;,
+  &quot;message&quot;: &quot;Your proposal has been submitted for review.&quot;
+}
+</code></pre>
+<hr />
+<h3 id="endpoint-vote-on-proposal"><strong>Endpoint: Vote on Proposal</strong></h3>
+<p>Cast a vote on an active proposal.</p>
+<ul>
+<li><strong>Method</strong>: <code>POST</code></li>
+<li><strong>URL</strong>: <code>/governance/vote</code></li>
+</ul>
+<h4 id="request_6"><strong>Request</strong></h4>
+<pre><code class="language-json">{
+  &quot;proposal_id&quot;: &quot;prop123&quot;,
+  &quot;vote&quot;: &quot;yes&quot;
+}
+</code></pre>
+<h4 id="response_8"><strong>Response</strong></h4>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;success&quot;,
+  &quot;message&quot;: &quot;Your vote has been recorded.&quot;
+}
+</code></pre>
+<hr />
+<h2 id="7-dynamic-contribution-scoring-dcs"><strong>7. Dynamic Contribution Scoring (DCS)</strong></h2>
+<h3 id="endpoint-get-dcs-score"><strong>Endpoint: Get DCS Score</strong></h3>
+<p>Retrieve the user’s DCS score.</p>
+<ul>
+<li><strong>Method</strong>: <code>GET</code></li>
+<li><strong>URL</strong>: <code>/dcs/score</code></li>
+<li><strong>Headers</strong>: <code>Authorization: Bearer &lt;token&gt;</code></li>
+</ul>
+<h4 id="response_9"><strong>Response</strong></h4>
+<pre><code class="language-json">{
+  &quot;dcs_score&quot;: 1350,
+  &quot;breakdown&quot;: {
+    &quot;transactions&quot;: 600,
+    &quot;staking&quot;: 500,
+    &quot;governance&quot;: 200,
+    &quot;referrals&quot;: 50,
+    &quot;penalties&quot;: -50
+  }
+}
+</code></pre>
+<hr />
+<h2 id="8-error-codes"><strong>8. Error Codes</strong></h2>
+<h3 id="io">**io</h3>
+<p>mon Errors<strong>
+| </strong>Error Code<strong> | </strong>Message<strong>                          | </strong>Description**                              |
+|----------------|--------------------------------------|----------------------------------------------|
+| 400            | <code>Bad Request</code>                       | Invalid or malformed request data.           |
+| 401            | <code>Unauthorized</code>                      | Missing or invalid authentication token.     |
+| 403            | <code>Forbidden</code>                         | Insufficient permissions.                    |
+| 404            | <code>Not Found</code>                         | Requested resource does not exist.           |
+| 500            | <code>Internal Server Error</code>             | An unexpected error occurred.                |</p>
+<hr />
+<h2 id="9-rate-limits"><strong>9. Rate Limits</strong></h2>
+<ul>
+<li><strong>Free Tier</strong>: 100 requests per minute.</li>
+<li><strong>Pro Tier</strong>: 500 requests per minute.</li>
+</ul>
+<h3 id="headers"><strong>Headers</strong></h3>
+<ul>
+<li>Rate limit status is returned in the headers:
+  <code>text
+  X-RateLimit-Limit: 100
+  X-RateLimit-Remaining: 80
+  X-RateLimit-Reset: 1683721200</code></li>
+</ul>
+<hr />
+<h2 id="10-examples"><strong>10. Examples</strong></h2>
+<h3 id="send-a-payment-curl"><strong>Send a Payment (cURL)</strong></h3>
+<pre><code class="language-bash">curl -X POST https://api.peopay.io
+/v1/transactions/p2p \
+-H &quot;Authorization: Bearer &lt;token&gt;&quot; \
+-H &quot;Content-Type: application/json&quot; \
+-d '{
+  &quot;recipient&quot;: &quot;recipient@example.io
+  &quot;,
+  &quot;amount&quot;: 50,
+  &quot;message&quot;: &quot;Payment for services&quot;
+}'
+</code></pre>
+<hr />
+<h3 id="next-steps"><strong>Next Steps</strong></h3>
+<ol>
+<li>Test API endpoints in the sandbox environment.</li>
+<li>Follow our <a href="../Developer_Guide/Getting_Started.md">Developer Guide</a> for integration tutorials.</li>
+<li>Join our io
+munity forum for support.</li>
+</ol>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../User_Guides/FAQs/" class="btn btn-neutral float-left" title="FAQs"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../Assets/Charts/user_growth_chart.png" class="btn btn-neutral float-right" title="User Growth">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../User_Guides/FAQs/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../Assets/Charts/user_growth_chart.png" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
