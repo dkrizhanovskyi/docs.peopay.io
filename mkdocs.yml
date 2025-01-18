@@ -1,0 +1,26 @@
+site_name: PeoPay Documentation
+theme:
+  name: readthedocs
+nav:
+  - Home: index.md
+  - White Paper: 
+      - Vision and Features: WhitePaper/PeoPay_White_Paper.md
+  - Dynamic Contribution Scoring (DCS): 
+      - Framework: DCS_Framework/DCS_Framework.md
+  - Strategic Plan: Strategic_Plan/Strategic_Plan.md
+  - Tokenomics Model: Tokenomics_Model/Tokenomics_Model.md
+  - Governance Guide: Governance_Guide/Governance_Guide.md
+  - User Guides:
+      - Getting Started: User_Guides/Getting_Started.md
+      - Crypto-to-Mobile: User_Guides/Crypto2Mobile.md
+      - Staking Guide: User_Guides/Staking_Guide.md
+      - FAQs: User_Guides/FAQs.md
+  - Developer Resources:
+      - API Documentation: API_Documentation/API_Endpoints.md
+  - Visual Assets:
+      - Charts:
+          - User Growth: Assets/Charts/user_growth_chart.png
+          - Tokenomics Distribution: Assets/Charts/tokenomics_pie_chart.png
+      - Diagrams:
+          - Ecosystem Flow: Assets/Diagrams/peopay_ecosystem_flowchart.png
+          - DCS Logic: Assets/Diagrams/peoprove_logic_diagram.png
