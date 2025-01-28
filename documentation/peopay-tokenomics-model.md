@@ -1,184 +1,116 @@
-# PeoPay Tokenomics Model
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# Tokenomics and Economic Framework for PeoPay
+
+### **1. Overview**
+
+PeoCoin (PEO) serves as the foundational utility and governance token within the PeoPay ecosystem. This document presents a comprehensive tokenomics model designed to ensure long-term sustainability, incentivize active ecosystem participation, and align with PeoPay’s overarching vision of financial inclusion. The model combines deflationary mechanisms, staking rewards, and milestone-based unlocks to stabilize token value while fostering ecosystem expansion. Furthermore, it incorporates dynamic mechanisms that enable adaptability to market fluctuations and evolving user needs.
+
+The PeoPay ecosystem is strategically engineered to bridge gaps in financial inclusion by leveraging blockchain technology’s inherent transparency, security, and efficiency. By addressing the challenges faced by underbanked populations, the framework ensures scalability and governance transparency while promoting ecosystem resilience through decentralized governance structures.
 
 ***
 
-#### **1. Overview** <a href="#id-1-overview" id="id-1-overview"></a>
+### **2. Total Token Supply**
 
-PeoCoin (PEO) is the utility and governance token at the core of the PeoPay ecosystem. This document outlines the tokenomics model that ensures sustainability, incentivizes ecosystem participation, and aligns with PeoPay's long-term vision of financial inclusion. The model incorporates deflationary mechanisms, staking rewards, and milestone-based unlocks to maintain token value while driving growth.
-
-***
-
-#### **2. Total Token Supply** <a href="#id-2-total-token-supply" id="id-2-total-token-supply"></a>
-
-* **Fixed Supply**: 1,000,000,000 PEO
-* **Blockchain**: Polygon (initially) with planned cross-chain integrations.
-* **Justification**:
-  * Polygon’s low fees and high scalability ensure seamless transactions.
-  * Future cross-chain bridges will expand PeoCoin’s accessibility and liquidity across other Layer 1 and Layer 2 networks.
+* **Elastic Supply**: Initially set at 1,000,000,000 PEO, the supply is governed through a community-driven approach that allows for dynamic adjustments. These adjustments are guided by detailed economic modeling and require stakeholder approval, ensuring equitable and data-driven decisions.
+  * **Adjustment Mechanisms**:
+    * **Expansion**: Supply increases may be introduced to accommodate growing transactional volumes or to support emerging market integrations.
+    * **Contraction**: Supply reductions are considered during periods of oversaturation to preserve token value and deflationary pressure.
+* **Blockchain Infrastructure**: Initially deployed on Polygon for scalability and cost efficiency, PeoPay plans future integrations with Ethereum, Solana, and other high-performance blockchains to foster cross-chain interoperability and expand liquidity options.
+  * **Rationale**:
+    * Polygon’s low transaction costs and high throughput provide an optimal launch environment.
+    * Cross-chain expansion enhances ecosystem accessibility, ensuring broader participation and seamless integration with decentralized finance (DeFi) protocols.
 
 ***
 
-#### **3. Token Allocation** <a href="#id-3-token-allocation" id="id-3-token-allocation"></a>
+### **3. Token Allocation**
 
-| **Category**             | **Allocation (%)** | **Amount (PEO)** | **Vesting / Unlock Criteria**                                                                                                  |
-| ------------------------ | ------------------ | ---------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| **Ecosystem Growth**     | 30%                | 300,000,000      | Released over 4 years, milestone-based unlocks tied to user adoption and transaction volumes.                                  |
-| **Staking Rewards**      | 15%                | 150,000,000      | Distributed over 10 years; adaptive yield tied to ecosystem metrics (usage-responsive adjustments).                            |
-| **Team & Advisors**      | 15%                | 150,000,000      | 2-year cliff, linear vesting over the next 2 years; performance-based unlocks tied to roadmap milestones.                      |
-| **Reserves & Liquidity** | 25%                | 250,000,000      | Locked in treasury; partially unlocked via governance and performance triggers. Includes a “Resilience Reserve” for insurance. |
-| **Grants, IDO, IEO**     | 15%                | 150,000,000      | See detailed breakdown below; dynamic pricing and milestone-based releases.                                                    |
+#### **Detailed Token Allocation Overview**
+
+<table data-header-hidden><thead><tr><th width="190"></th><th></th><th></th><th></th></tr></thead><tbody><tr><td><strong>Category</strong></td><td><strong>Allocation (%)</strong></td><td><strong>Amount (PEO)</strong></td><td><strong>Vesting/Unlock Criteria</strong></td></tr><tr><td>Ecosystem Growth</td><td>15%</td><td>150,000,000</td><td>Quarterly allocations contingent upon achieving a 5% growth in active users, with adjustments for high-growth regions. Allocations will fund regional marketing, user onboarding initiatives, and partnerships to promote financial literacy in underserved areas.</td></tr><tr><td>Staking Rewards</td><td>15%</td><td>150,000,000</td><td>Distributed over a 10-year period, dynamically aligned with staking pool growth and overall ecosystem activity. Participants providing liquidity in high-demand trading pairs are eligible for additional rewards proportional to their contributions.</td></tr><tr><td>Team &#x26; Advisors</td><td>10%</td><td>100,000,000</td><td>Subject to a 1-year cliff and linear vesting over 3 years, tied to achieving roadmap milestones verified through community audits. Performance-based bonuses incentivize exceptional contributions to ecosystem development and governance initiatives.</td></tr><tr><td>Reserves &#x26; Liquidity</td><td>20%</td><td>200,000,000</td><td>Reserved for liquidity stabilization, market interventions, and infrastructure upgrades. A contingency fund is included to mitigate unforeseen events, with all expenditures subject to governance approvals to maintain transparency and accountability.</td></tr><tr><td>Private Investors</td><td>20%</td><td>200,000,000</td><td>Allocated via structured private sales under Fair Token Offering (FTO) principles. Tranches are tailored to attract institutional investors and high-net-worth individuals while ensuring fairness and accessibility for smaller participants.</td></tr><tr><td>ICO and CEX Listings</td><td>10%</td><td>100,000,000</td><td>Aimed at increasing accessibility through Initial Coin Offerings and listings on major centralized exchanges. Funds will also cover integrations with mobile payment platforms and regional promotional campaigns to enhance adoption in emerging markets.</td></tr><tr><td>Innovation &#x26; Development</td><td>10%</td><td>100,000,000</td><td>Directed toward research and development, pilot programs, and the deployment of new protocols. Collaboration with academic institutions and technology providers ensures continuous innovation and relevance within the rapidly evolving blockchain landscape.</td></tr></tbody></table>
 
 ***
 
-#### **4. Grants, IDO, and IEO Allocation** <a href="#id-4-grants-ido-and-ieo-allocation" id="id-4-grants-ido-and-ieo-allocation"></a>
+### **4. Mathematical Implementation**
 
-**4.1 Grants**
+#### **1. Ecosystem Growth Allocation**
 
-* **Tokens Allocated**: 50,000,000 PEO (5%)
-* **Purpose**:
-  * Secure funding from blockchain ecosystems (e.g., Polygon, Binance, Solana).
-  * Support early-stage development and pilot programs in target regions.
-* **Vesting & Unlock Criteria**:
-  * Locked for 6 months post-grant approval.
-  * Linear unlock over 12 months, contingent upon proof-of-utility (PoU) milestones (e.g., pilot program completion, technical upgrades).
+*   **Quarterly Release Formula**:
 
-**4.2 Initial DEX Offering (IDO)**
+    $$
+    Qa=Sg16if Growth Rate (GR)≥5%Q_a = \frac{S_g}{16} \quad \text{if Growth Rate (GR)} \geq 5\%
+    $$
 
-* **Tokens Allocated**: 50,000,000 PEO (5%)
-* **Mechanism**:
-  * **Dynamic Pricing (Bonding Curve)**: IDO begins at a base price (e.g., $0.05/PEO), with price adjustments based on demand.
-  * Conducted on decentralized exchanges (e.g., QuickSwap, SushiSwap).
-* **Liquidity Support**:
-  * Proceeds will fund liquidity pools (e.g., PEO/USDC, PEO/MATIC).
+    Where:
 
-**4.3 Initial Exchange Offering (IEO)**
+    * QaQ\_a: Quarterly Allocation.
+    * SgS\_g: Total allocation for Ecosystem Growth (150,000,000 PEO).
+*   **Regional Adjustment Formula**:
 
-* **Tokens Allocated**: 50,000,000 PEO (5%)
-* **Mechanism**:
-  * **Dutch Auction**: Ensures fair price discovery on centralized exchanges (e.g., Binance, KuCoin).
-* **Purpose**:
-  * Broaden exposure to retail and institutional investors.
-  * Provide additional liquidity and trading options.
+    $$
+    Qr=Qa×(1+GRr−GRg100)Q_r = Q_a \times \left(1 + \frac{GR_r - GR_g}{100}\right)
+    $$
 
-***
+    Where:
 
-#### **5. Utility of PeoCoin** <a href="#id-5-utility-of-peocoin" id="id-5-utility-of-peocoin"></a>
+    * QrQ\_r: Adjusted allocation for a specific region.
+    * GRrGR\_r: Regional Growth Rate.
+    * GRgGR\_g: Global Growth Target.
 
-PeoCoin drives the PeoPay ecosystem, offering multi-dimensional utility:
+#### **2. Staking Rewards**
 
-**5.1 Transaction Fee Payments**
+*   **Dynamic Yield Formula**:
 
-* Users pay transaction fees in PEO and enjoy discounts:
-  * **Bronze Tier**: 5% discount.
-  * **Silver Tier**: 10% discount.
-  * **Gold Tier**: 20% discount.
-  * **Platinum Tier**: 30% discount.
+    $$
+    Rt=Rb×(1+GRs100)R_t = R_b \times \left(1 + \frac{GR_s}{100}\right)
+    $$
 
-**5.2 Staking and Yield**
+    Where:
 
-* Stake PEO to earn rewards based on network performance and user engagement.
-* Dynamic Contribution Scoring (DCS) tiers provide additional yield bonuses.
+    * RtR\_t: Total rewards for the staking period.
+    * RbR\_b: Base reward amount.
+    * GRsGR\_s: Growth Rate of Staking Pools.
+*   **Liquidity Bonus Formula**:
 
-**5.3 Governance**
+    $$
+    Bt=Rt×M×LB_t = R_t \times M \times L
+    $$
 
-* Token holders can propose and vote on platform upgrades, treasury allocations, and fee structures.
-* Voting power scales with DCS scores, rewarding engaged users.
+    Where:
 
-**5.4 DeFi and Collateralization**
+    * BtB\_t: Bonus for liquidity contributions.
+    * MM: Bonus Multiplier (based on market demand).
+    * LL: Liquidity contribution percentage.
 
-* Use PEO as collateral in future lending and borrowing protocols.
-* Cross-chain integrations will expand DeFi use cases.
+#### **3. Team and Advisor Vesting**
 
-**5.5 Merchant Incentives**
+* **Vesting Formula**:
 
-* Merchants accepting PEO benefit from reduced transaction fees and priority access to new features.
+Where:
 
-***
+$$
+Va=St3×McMtV_a = \frac{S_t}{3} \times \frac{M_c}{M_t}
+$$
 
-#### **6. Deflationary Mechanisms** <a href="#id-6-deflationary-mechanisms" id="id-6-deflationary-mechanisms"></a>
-
-To maintain long-term token value, PeoCoin incorporates several deflationary strategies:
-
-**6.1 Fee Burning**
-
-* A percentage of transaction fees paid in PEO is burned, permanently reducing supply.
-
-**6.2 Penalty Burning**
-
-* Tokens deducted via DCS penalties are burned, discouraging malicious behavior.
-
-**6.3 Revenue Buybacks**
-
-* A portion of platform revenue (e.g., transaction fees, merchant services) is allocated for buybacks and token burns.
+* VaV\_a: Annual vesting amount.
+* StS\_t: Total team allocation.&#x20;
+* McM\_c: Completed milestones.&#x20;
+* MtM\_t: Total milestones.
 
 ***
 
-#### **7. Staking and Rewards** <a href="#id-7-staking-and-rewards" id="id-7-staking-and-rewards"></a>
+**5. Summary**
 
-**7.1 Dynamic Yield**
-
-* Staking rewards adjust quarterly based on ecosystem metrics:
-  * Total transaction volume.
-  * User growth and retention.
-  * Merchant adoption rates.
-
-**7.2 DCS-Driven Rewards**
-
-* Staking bonuses are tied to DCS tiers:
-  * **Bronze Tier**: Base yield.
-  * **Silver Tier**: +10% yield bonus.
-  * **Gold Tier**: +20% yield bonus.
-  * **Platinum Tier**: +30% yield bonus.
-
-***
-
-#### **8. Sustainability and Treasury Management** <a href="#id-8-sustainability-and-treasury-management" id="id-8-sustainability-and-treasury-management"></a>
-
-**8.1 Treasury Allocation**
-
-* Funds are managed by a community-governed treasury for:
-  * Liquidity support and market stabilization.
-  * Development of additional features (e.g., lending, borrowing).
-  * Marketing and regional expansion.
-
-**8.2 Resilience Reserve**
-
-* A portion of the treasury is allocated as an insurance fund to stabilize the ecosystem during crises (e.g., market downturns, hacks).
-
-**8.3 Gradual Decentralization**
-
-* Governance rights over treasury funds will transition to token holders over three years, ensuring community-driven management.
-
-***
-
-#### **9. Scalability and Growth** <a href="#id-9-scalability-and-growth" id="id-9-scalability-and-growth"></a>
-
-**9.1 Scalability Benchmarks**
-
-* Platform supports up to 1,000 transactions per second (TPS).
-* Achieves 99.9% uptime during peak periods.
-
-**9.2 Growth Strategies**
-
-1. **Cross-Chain Integration**:
-   * Expand to Ethereum, Solana, and other blockchains.
-2. **Localized Adoption**:
-   * Tailor marketing and incentives for underbanked regions.
-3. **Developer Ecosystem**:
-   * Provide APIs and grants to encourage third-party integrations.
-
-***
-
-#### **10. Long-Term Vision** <a href="#id-10-long-term-vision" id="id-10-long-term-vision"></a>
-
-PeoCoin’s tokenomics model is designed to evolve with the platform’s growth. By leveraging deflationary mechanisms, milestone-based unlocks, and DCS-powered incentives, PeoCoin ensures long-term value and aligns individual actions with the ecosystem’s success.
-
-***
-
-#### **Next Steps** <a href="#next-steps" id="next-steps"></a>
-
-* [White Paper](peopay-white-paper.md): For the platform’s vision and core features.
-* [DCS Framework](dynamic-contribution-scoring-dcs-framework.md): For details on incentive mechanics and scoring.
-* [Strategic Plan](peopay-strategic-plan.md): For implementation and scaling milestones.
-
-***
+The PeoPay tokenomics framework is a sophisticated model designed to ensure equitable growth, economic sustainability, and long-term ecosystem resilience. Through adaptive supply mechanisms, performance-driven staking rewards, and robust governance structures, PeoPay aligns the interests of all stakeholders. By integrating regional strategies and promoting inclusivity, the ecosystem is positioned to lead in addressing financial inclusion challenges while fostering global adoption of decentralized technologies.
