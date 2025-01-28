@@ -8,9 +8,9 @@
 ## Documentation
 
 * [PeoPay White Paper](documentation/peopay-white-paper.md)
+* [Tokenomics and Economic Framework for PeoPay](documentation/peopay-tokenomics-model.md)
 * [Dynamic Contribution Scoring (DCS) Framework](documentation/dynamic-contribution-scoring-dcs-framework.md)
 * [PeoPay Strategic Plan](documentation/peopay-strategic-plan.md)
-* [Tokenomics and Economic Framework for PeoPay](documentation/peopay-tokenomics-model.md)
 * [PeoPay Governance Guide](documentation/peopay-governance-guide.md)
 
 ## User Guides

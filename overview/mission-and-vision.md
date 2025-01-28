@@ -1,6 +1,23 @@
+---
+cover: ../.gitbook/assets/brandmark-design(1).png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: full
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Mission and Vision
-
-
 
 ***
 
@@ -79,4 +96,3 @@ PeoPay stands out as the ideal platform for achieving financial inclusion becaus
 * **User-Centric Design**: PeoPay prioritizes simplicity and user experience, ensuring even first-time users can navigate its platform effortlessly.
 * **Localized Solutions**: By offering support for regional stablecoins and mobile money integrations, PeoPay meets users where they are, solving real-world financial challenges.
 * **Sustainability**: PeoPay is committed to building an environmentally friendly blockchain ecosystem aligned with global sustainability goals.
-

@@ -1,3 +1,18 @@
+---
+icon: sigma
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Dynamic Contribution Scoring (DCS) Framework
 
 ### 1. Overview
@@ -19,9 +34,9 @@ Dynamic Contribution Scoring (DCS) is a core mechanism within the PeoPay ecosyst
 
 The DCS formula calculates a user’s contribution score based on weighted positive activities and penalties:
 
-```
+$$
 DCS(t) = α * Tx(t) + β * Stake(t) + γ * Gov(t) + δ * Referral(t) - ε * Penalty(t)
-```
+$$
 
 Where:
 
@@ -148,9 +163,3 @@ Future expansions into DeFi products (e.g., lending, borrowing) could leverage D
 DCS is integral to PeoPay’s vision of a transparent, user-driven financial ecosystem. By aligning incentives with collective goals, DCS fosters trust, engagement, and sustainable growth—ensuring the platform’s long-term success.
 
 ***
-
-#### Next Steps
-
-* [White Paper](peopay-white-paper.md): Overview of PeoPay’s vision and features
-* [Strategic Plan](peopay-strategic-plan.md): Implementation and testing details
-* [Tokenomics Model](peopay-tokenomics-model.md): Understanding DCS’s role in token dynamics
