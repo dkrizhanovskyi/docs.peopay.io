@@ -146,7 +146,7 @@ We’re building a platform for the community, by the community. Here’s how yo
 2. **Engage in Governance**:
    * Use PeoCoin to vote on proposals and shape the ecosystem.
 3. **Join Our Community**:
-   * Follow us on [Twitter](https://twitter.com/peopay) and [LinkedIn](https://linkedin.com/company/peopay) for updates.
+   * Follow us on [Twitter](https://x.com/PeoPayCore) and [LinkedIn](https://www.linkedin.com/company/peo-pay) for updates.
 
 ***
 
